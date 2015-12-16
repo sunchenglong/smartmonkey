@@ -12,7 +12,7 @@ import java.util.Date;
   
 public class JavaShellUtil {  
 //基本路径  
-private static final String basePath = "/tmp/";
+private static final String basePath = "./";
 
 //记录Shell执行状况的日志文件的位置(绝对路径)  
 private static final String executeShellLogFile = basePath + "executeShell.log";  
@@ -69,6 +69,6 @@ public int executeShell(String shellCommand) throws IOException {
 	public static void main(String args[]) throws IOException{
 		JavaShellUtil t = new JavaShellUtil();
 		String commond = "date";
-		System.out.println(t.executeShell(commond));
+		System.out.println(t.executeShell("date"));
 	}
 }
