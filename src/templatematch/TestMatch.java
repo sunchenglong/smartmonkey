@@ -19,7 +19,7 @@ public class TestMatch {
 	}
 	public static void test2()
 	{
-		MatchInterface tool = new MatchInterface("3.jpg","a.jpg",63,515,127,708,480,800);
+		MatchInterface tool = new MatchInterface("testPic/3.jpg","testPic/a.jpg",63,515,127,708,480,800);
 		MatchResult result = tool.getMatchResult();
 		System.out.println(result.startx);
 		System.out.println(result.starty);
