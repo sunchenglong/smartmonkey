@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/hadoop/android/opencv-2.4.10/build/bin/opencv-2410.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="/home/hadoop/android/opencv-2.4.10/build/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/hadoop/android/android-sdk-linux/tools/lib/monkeyrunner.jar"/>
+	<classpathentry kind="lib" path="/home/hadoop/android/android-sdk-linux/tools/lib/guava-17.0.jar"/>
+	<classpathentry kind="lib" path="/home/hadoop/android/android-sdk-linux/tools/lib/sdkuilib.jar"/>
+	<classpathentry kind="lib" path="/home/hadoop/android/android-sdk-linux/tools/lib/common.jar"/>
+	<classpathentry kind="lib" path="/home/hadoop/android/android-sdk-linux/tools/lib/chimpchat.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

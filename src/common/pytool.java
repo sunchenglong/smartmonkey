@@ -1,12 +1,11 @@
 package common;
 public class pytool {
-	private static final String MONKEYRUNNER = " $ANDROID_HOME/monkeyrunner ";
 	private static final String TAKESHOT = "takeshot.py ";
 	
 	public static void takeshot(String filename) throws Exception{
 		String pypath = new pytool().getPypath();
 		try{
-			JavaShellUtil.execute(MONKEYRUNNER + pypath + TAKESHOT + filename);
+			JavaShellUtil.execute( pypath + TAKESHOT + filename);
 		}catch(Exception e){
 			throw e;
 		}
@@ -26,8 +25,8 @@ public class pytool {
 	}
 	
 	public static void main(String args[]) throws Exception{
-		//String targetpath = new pytool().getTmppath();
-		takeshot("./test.png");
+		String targetpath = new pytool().getTmppath();
+		//takeshot("./test.png");
 		//pytool p = new pytool();
 		//p.getPypath();
 	}

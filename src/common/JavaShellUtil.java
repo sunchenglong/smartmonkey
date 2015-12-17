@@ -9,23 +9,26 @@ import java.io.OutputStreamWriter;
 import java.text.DateFormat;  
 import java.text.SimpleDateFormat;  
 import java.util.Date;  
-  
+
 public class JavaShellUtil {  
+
+private static final String MONKEYRUNNER = "$ANDROID_HOME/tools/monkeyrunner";
 
 private static final String basePath = "/tmp/";
 
 private static final String executeShellLogFile = basePath + "executeShell.log";  
    
 private boolean executeShell(String shellCommand) throws IOException {  
-	boolean success = false;  
-	StringBuffer stringBuffer = new StringBuffer();  
-	BufferedReader bufferedReader = null;  
+	boolean success = false;
+	StringBuffer stringBuffer = new StringBuffer();
+	BufferedReader bufferedReader = null;
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS ");  
 	try {
 		stringBuffer.append(dateFormat.format(new Date())).append("Prepare Shell Command!").append(shellCommand).append(" \r\n");  
 		Process pid = null;  
-		String[] cmd = {"/bin/sh","-c",shellCommand};  
-		pid = Runtime.getRuntime().exec(cmd);
+		//String[] cmd = {"/bin/sh","-c",shellCommand};  
+		String[] cmd = {MONKEYRUNNER,shellCommand};
+ 		pid = Runtime.getRuntime().exec(cmd);
 		if (pid != null) {  
 			stringBuffer.append("PID：").append(pid.toString()).append("\r\n");  
 			bufferedReader = new BufferedReader(new InputStreamReader(pid.getInputStream()), 1024);  
@@ -68,10 +71,13 @@ private boolean executeShell(String shellCommand) throws IOException {
 		}	
 	}
 	public static void main(String args[]) throws IOException{
-		JavaShellUtil t = new JavaShellUtil();
-		String commond = "date";
+		//JavaShellUtil t = new JavaShellUtil();
+		//String commond = "date";
 		try{
-			System.out.println(t.executeShell(commond));
+			//System.out.println(t.executeShell(commond));
+			String[] cmd = {"/home/hadoop/android/android-sdk-linux/tools/monkeyrunner","/home/hadoop/git/smartmonkey/pysrc/takeshot.py","～/test.png"};
+	 		//String[] cmd = {"python","/home/hadoop/git/smartmonkey/pysrc/test.py","test"};
+			Process pid = Runtime.getRuntime().exec(cmd);
 		}catch(Exception e){
 			throw(e);
 		}
