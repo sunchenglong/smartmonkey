@@ -18,8 +18,8 @@ private static final String executeShellLogFile = basePath + "executeShell.log";
   
 private static final String sendKondorShellName = basePath + "sendKondorFile.sh";  
   
-private int executeShell(String shellCommand) throws IOException {  
-	int success = 0;  
+private boolean executeShell(String shellCommand) throws IOException {  
+	boolean success = false;  
 	StringBuffer stringBuffer = new StringBuffer();  
 	BufferedReader bufferedReader = null;  
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:SS ");  
@@ -57,12 +57,17 @@ private int executeShell(String shellCommand) throws IOException {
 				outputStreamWriter.close();  
 			}  
 		}  
-		success = 1;  
+		success = true;  
 	}  
 	return success;  
 	}
-	public static int execute(String shellCommand) throws IOException {  
-	
+	public static boolean execute(String shellCommand) throws Exception {  
+		JavaShellUtil shellutil = new JavaShellUtil();
+		try{
+			return shellutil.executeShell(shellCommand);
+		}catch(Exception e){
+			throw(e);
+		}	
 	}
 	public static void main(String args[]) throws IOException{
 		JavaShellUtil t = new JavaShellUtil();

@@ -3,7 +3,15 @@ public class pytool {
 	private static final String MONKEYRUNNER = "$ANDROID_HOME/monkeyrunner";
 	private static final String TAKESHOT = MONKEYRUNNER + " pysrc/takeshot.py ";
 	
-	public void takeshot(String filename){
-		
+	public static void takeshot(String filename) throws Exception{
+		try{
+			JavaShellUtil.execute(TAKESHOT + filename);
+		}catch(Exception e){
+			throw e;
+		}
+	}
+	
+	public static void main(String args[]) throws Exception{
+		takeshot("./test.png");
 	}
 }
