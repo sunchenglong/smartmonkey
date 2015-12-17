@@ -15,9 +15,7 @@ public class JavaShellUtil {
 private static final String basePath = "/tmp/";
 
 private static final String executeShellLogFile = basePath + "executeShell.log";  
-  
-private static final String sendKondorShellName = basePath + "sendKondorFile.sh";  
-  
+   
 private boolean executeShell(String shellCommand) throws IOException {  
 	boolean success = false;  
 	StringBuffer stringBuffer = new StringBuffer();  
@@ -26,7 +24,7 @@ private boolean executeShell(String shellCommand) throws IOException {
 	try {
 		stringBuffer.append(dateFormat.format(new Date())).append("Prepare Shell Command!").append(shellCommand).append(" \r\n");  
 		Process pid = null;  
-		String[] cmd = {"/bin/sh", "-c", shellCommand};  
+		String[] cmd = {"/bin/sh","-c",shellCommand};  
 		pid = Runtime.getRuntime().exec(cmd);
 		if (pid != null) {  
 			stringBuffer.append("PID：").append(pid.toString()).append("\r\n");  
