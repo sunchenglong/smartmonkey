@@ -26,12 +26,12 @@ public class monkeyrunnertest {
         //添加启动权限
          //   String action = "android.intent.action.MAIN";   
         //    Collection<String> categories = new ArrayList<String>();   
-        //    categories.add("android.intent.category.LAUNCHER");
-    //              启动要测试的主界面
+      //    categories.add("android.intent.category.LAUNCHER");
+      //      启动要测试的主界面
       //      device.startActivity(null, action, null, null, categories,   
       //      new HashMap<String, Object>(),"cn.com.fetion/.android.ui.activities.StartActivity", 0); 
-     //           点击某一个坐标
-//touch方法略有变化           
+      //           点击某一个坐标
+      //touch方法略有变化           
       device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
       device.takeSnapshot().writeToFile("test1.png","png");
       
