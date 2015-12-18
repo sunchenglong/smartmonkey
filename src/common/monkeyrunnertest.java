@@ -8,23 +8,18 @@ public class monkeyrunnertest {
     /**
      * @param args
      */
-     //这里有变化
     private static AdbChimpDevice device;
     private static AdbBackend adb;
-
-
     public static void main(String[] args) {
        // TODO Auto-generated method stub
-
-
         if (adb==null){ 
              adb = new AdbBackend(); 
-             //      参数分别为自己定义的等待连接时间和设备id 
+              //参数分别为自己定义的等待连接时间和设备id 
               //这里需要注意一下adb的类型
              device = (AdbChimpDevice) adb.waitForConnection(8000,"1af74e33");
          } 
         //添加启动权限
-         //   String action = "android.intent.action.MAIN";   
+             // String action = "android.intent.action.MAIN";   
         //    Collection<String> categories = new ArrayList<String>();   
       //    categories.add("android.intent.category.LAUNCHER");
       //      启动要测试的主界面
@@ -34,8 +29,5 @@ public class monkeyrunnertest {
       //touch方法略有变化           
       device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
       device.takeSnapshot().writeToFile("test1.png","png");
-      
-    }      
-
-
+    }
     }
