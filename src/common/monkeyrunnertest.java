@@ -11,6 +11,7 @@ public class monkeyrunnertest {
     private static AdbChimpDevice device;
     private static AdbBackend adb;
     public static void main(String[] args) {
+    	System.out.println("start!");
        // TODO Auto-generated method stub
         if (adb==null){ 
              adb = new AdbBackend(); 
@@ -19,15 +20,19 @@ public class monkeyrunnertest {
              device = (AdbChimpDevice) adb.waitForConnection(8000,"1af74e33");
          } 
         //添加启动权限
-             // String action = "android.intent.action.MAIN";   
-        //    Collection<String> categories = new ArrayList<String>();   
-      //    categories.add("android.intent.category.LAUNCHER");
+       String action = "android.intent.action.MAIN";   
+          Collection<String> categories = new ArrayList<String>();   
+          categories.add("android.intent.category.LAUNCHER");
       //      启动要测试的主界面
-      //      device.startActivity(null, action, null, null, categories,   
-      //      new HashMap<String, Object>(),"cn.com.fetion/.android.ui.activities.StartActivity", 0); 
+            device.startActivity(null, action, null, null, categories,   
+            new HashMap<String, Object>(),"cn.'; '"
+            		+ ""
+            		+ ""
+            		+ ".fetion/.android.ui.activities.StartActivity", 0); 
       //           点击某一个坐标
       //touch方法略有变化           
-      device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
-      device.takeSnapshot().writeToFile("test1.png","png");
+      //device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
+      //device.takeSnapshot().writeToFile("test1.png","png");
+      System.out.println("Finished!");
     }
     }
