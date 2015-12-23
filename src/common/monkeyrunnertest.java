@@ -24,7 +24,7 @@ public class monkeyrunnertest {
           Collection<String> categories = new ArrayList<String>();   
           categories.add("android.intent.category.LAUNCHER");
       //      启动要测试的主界面
-            device.startActivity(null, action, null, null, categories,   
+       //     device.startActivity(null, action, null, null, categories,   
             new HashMap<String, Object>(),"cn.'; '"
             		+ ""
             		+ ""
