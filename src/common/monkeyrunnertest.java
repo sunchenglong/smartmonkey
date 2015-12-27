@@ -15,24 +15,16 @@ public class monkeyrunnertest {
        // TODO Auto-generated method stub
         if (adb==null){ 
              adb = new AdbBackend(); 
-              //参数分别为自己定义的等待连接时间和设备id 
-              //这里需要注意一下adb的类型
-             device = (AdbChimpDevice) adb.waitForConnection(8000,"1af74e33");
+             device = (AdbChimpDevice) adb.waitForConnection(800,"MB309MG27945");
          } 
-        //添加启动权限
-       String action = "android.intent.action.MAIN";   
-          Collection<String> categories = new ArrayList<String>();   
-          categories.add("android.intent.category.LAUNCHER");
-      //      启动要测试的主界面
-       //     device.startActivity(null, action, null, null, categories,   
-            new HashMap<String, Object>(),"cn.'; '"
-            		+ ""
-            		+ ""
-            		+ ".fetion/.android.ui.activities.StartActivity", 0); 
-      //           点击某一个坐标
-      //touch方法略有变化           
-      //device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
-      //device.takeSnapshot().writeToFile("test1.png","png");
-      System.out.println("Finished!");
+        String action = "android.intent.action.MAIN";   
+        Collection<String> categories = new ArrayList<String>();   
+        categories.add("android.intent.category.LAUNCHER");
+        device.startActivity(null, action, null, null, categories,   
+        		new HashMap<String, Object>(),"cn.com.fetion/.android.ui.activities.StartActivity", 0);
+        device.touch(202,258,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
+        device.takeSnapshot().writeToFile("test1.png","png");
+        System.out.println("Finished!");
+        adb.shutdown();
     }
-    }
+}

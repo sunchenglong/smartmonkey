@@ -6,4 +6,3 @@ def takeshot(filename):
     result.writeToFile(filename,'png')
 if __name__=='__main__':
     takeshot(sys.argv[1])
-    
