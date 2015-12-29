@@ -24,7 +24,6 @@ public class testJingdong {
 		System.out.println(result.startx+result.width/2);
 		System.out.println(result.starty+result.height/2);
 		device.touch(result.startx+result.width/2,result.starty+result.height/2,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP); 
-		device.takeSnapshot().writeToFile("test1.png","png");
 		System.out.println("Finished!");
 		adb.shutdown();
 	}

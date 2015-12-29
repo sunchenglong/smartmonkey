@@ -13,5 +13,6 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/match/match/x86"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/json-20151123.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
