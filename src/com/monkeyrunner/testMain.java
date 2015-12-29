@@ -50,9 +50,8 @@ public class testMain {
 					device.touch(result.startx+result.width/2,result.starty+result.height/2,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP);
 					try{
 					    Thread thread = Thread.currentThread();
-					    thread.sleep(2000);//暂停1.5秒后程序继续执行
+					    thread.sleep(2000);
 					}catch (InterruptedException e) {
-					    // TODO Auto-generated catch block
 					    e.printStackTrace();
 					}
 				}
