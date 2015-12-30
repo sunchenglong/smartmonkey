@@ -3,6 +3,7 @@ import org.opencv.core.*;
 import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.*;
 public class TMAlgorithm extends MatchStrategy{
+	@Override
 	public MatchResult matchalgorithmInterface(ImageObj imgobj)
 	{	
 		Mat templateimg = imgobj.getTemplate();
