@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 public class MatchResult {
 	public int startx;
 	public int starty;

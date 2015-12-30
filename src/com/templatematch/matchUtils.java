@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 public class matchUtils {
 	private MatchResult result;
 	public matchUtils(String SourcePath,String TemplatePath,int startx,int endx,int starty,int endy,int width,int height)

@@ -10,9 +10,8 @@ import java.util.HashMap;
 import com.android.chimpchat.adb.AdbBackend;
 import com.android.chimpchat.adb.AdbChimpDevice;
 import com.android.monkeyrunner.*;
-
-import templatematch.MatchInterface;
-import templatematch.MatchResult;
+import com.templatematch.MatchInterface;
+import com.templatematch.MatchResult;
 public class testMain {
 	private static String basePath = "testPic/jd/";
 	private static String settings = basePath +"settings";

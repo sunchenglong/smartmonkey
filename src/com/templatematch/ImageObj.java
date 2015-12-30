@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 import org.opencv.core.*;
 import org.opencv.highgui.*;
 public class ImageObj {

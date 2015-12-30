@@ -1,10 +1,8 @@
 package com.saliency;
-
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.highgui.Highgui;
-
 public class lcalgorithm extends SaliencyStrategy{
 	static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
 	private static int threshold = 30;
@@ -14,6 +12,7 @@ public class lcalgorithm extends SaliencyStrategy{
 		float min=Float.MAX_VALUE;
 	    float max=Float.MIN_VALUE;
 		String imgpath = imgobj.getSourcePath();
+		int k_num = imgobj.getK_num();
 		SaliencyResult result = null;
 		Mat img = Highgui.imread(imgpath, Highgui.CV_LOAD_IMAGE_GRAYSCALE);
 		Mat saliencyMap = new Mat();
@@ -60,18 +59,19 @@ public class lcalgorithm extends SaliencyStrategy{
 	        	CurIndex ++;
 	        }
 	    }
-	   
-	    Highgui.imwrite("sa-result.jpg", saliencyMap);
+	    result.setResult(new findMarkUtil().findMarkUtil_random(saliencyMap,k_num,255));
+	    result.setK_num(k_num);
+	    result.setSource(imgpath);
+	    result.writeResult(result, "sa-result.jpg");
 		
 		return result;
 	}
-		
+	
 	private static int partTwo(float input){
 		if(input < threshold){
 			return 0;
 		}else 
 			return 255;
 	}
-
 
 }

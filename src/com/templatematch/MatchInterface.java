@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 public class MatchInterface {
 	private MatchResult result;
 	public MatchInterface(String SourcePath,String TemplatePath,int startx,int endx,int starty,int endy,int width,int height)

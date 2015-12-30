@@ -67,6 +67,6 @@ public class saliencytest {
 			return 255;
 	}
 	public static void main(String args[]){
-		new saliencytest("result.jpg");
+		//new saliencytest("result.jpg");
 	}
 }

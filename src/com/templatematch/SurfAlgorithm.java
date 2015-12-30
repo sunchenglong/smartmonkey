@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.MatOfDMatch;

@@ -1,4 +1,4 @@
-package templatematch;
+package com.templatematch;
 
 public class Context {
 	private MatchStrategy matchstrategy;

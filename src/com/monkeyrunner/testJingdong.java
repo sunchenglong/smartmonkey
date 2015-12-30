@@ -3,11 +3,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import templatematch.MatchInterface;
-import templatematch.MatchResult;
-
 import com.android.chimpchat.adb.AdbBackend;
 import com.android.chimpchat.adb.AdbChimpDevice;
+import com.templatematch.MatchInterface;
+import com.templatematch.MatchResult;
 public class testJingdong {
 	private static AdbChimpDevice device;
 	private static AdbBackend adb;
