@@ -16,7 +16,8 @@ public class SaliencyUtils {
 		imgobj.setSource(sourcePath);
 		imgobj.setK_num(k_num);;
 		result = context.contextInterface(imgobj);
-		imgobj.writeResult(resultPath);
+		result.writeResult(resultPath);
+		result.printResult();
 	}
 	public SaliencyResult getSaliencyResult(){
 		return result;
