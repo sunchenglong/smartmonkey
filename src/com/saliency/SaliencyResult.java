@@ -18,13 +18,18 @@ public class SaliencyResult {
 	//Get the Input Parameters	
 	public int getK_num(){return k_num;}
 	public Mat getSource(){return sourceimg;}
-	public void writeResult(SaliencyResult r,String Pathname){
+	public void writeResult(String Pathname){
 		for(int i = 0;i < 2 * k_num;i=i+2){
-			Point pt = new Point(result[i],result[i+1]);
+			Point pt = new Point(this.result[i],this.result[i+1]);
 			Scalar green = new Scalar(0,255,0);
 			Core.circle(sourceimg, pt, 3, green);
 		}
 		Highgui.imwrite(Pathname, sourceimg);
+	}
+	public void printResult(){
+		for(int i = 0;i < 2 * k_num;i=i+2){
+			System.out.println("("+this.result[i]+","+this.result[i+1]+")");
+		}
 	}
 
 }

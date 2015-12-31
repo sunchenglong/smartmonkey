@@ -55,10 +55,7 @@ public class saliencytest {
 	        }
 	        System.out.println("");
 	    }
-	    //Size resize= new Size(200,400);
-        //Core.dft(img, result);
-	    //Imgproc.resize(img, result, resize);
-		Highgui.imwrite("sa-result.jpg", saliencyMap);
+	    Highgui.imwrite("sa-result.jpg", saliencyMap);
 	}
 	private static int partTwo(float input){
 		if(input < threshold){
@@ -66,7 +63,8 @@ public class saliencytest {
 		}else 
 			return 255;
 	}
+
 	public static void main(String args[]){
-		//new saliencytest("result.jpg");
+		new saliencytest("result.jpg");
 	}
 }

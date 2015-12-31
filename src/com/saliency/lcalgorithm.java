@@ -6,7 +6,7 @@ import org.opencv.highgui.Highgui;
 public class lcalgorithm extends SaliencyStrategy{
 	static{ System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
 	private static int threshold = 30;
-	@Override
+	@SuppressWarnings("null")
 	public SaliencyResult saliencyalgorithmInterface(ImageObj imgobj) {
 		// TODO Auto-generated method stub
 		float min=Float.MAX_VALUE;
@@ -59,11 +59,10 @@ public class lcalgorithm extends SaliencyStrategy{
 	        	CurIndex ++;
 	        }
 	    }
-	    result.setResult(new findMarkUtil().findMarkUtil_random(saliencyMap,k_num,255));
+	    new findMarkUtil();
+		result.setResult(findMarkUtil.findMarkUtil_random(saliencyMap,k_num,255));
 	    result.setK_num(k_num);
 	    result.setSource(imgpath);
-	    result.writeResult(result, "sa-result.jpg");
-		
 		return result;
 	}
 	
