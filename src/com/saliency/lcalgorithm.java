@@ -58,7 +58,7 @@ public class lcalgorithm extends SaliencyStrategy{
 	        }
 	    }
 	    new findMarkUtil();
-	    int nums[] = findMarkUtil.findMarkUtil_kmeans(saliencyMap,k_num,255,5,5);
+	    int nums[] = findMarkUtil.findMarkUtil_kmeans(saliencyMap,k_num,255,0,5);
 	    result.setK_num(k_num);
 	    result.setSource(imgpath);
 	    result.setResult(nums);
