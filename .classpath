@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/match/match/lib/opencv-2410.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/match/match/x86"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/guava-17.0.jar"/>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/sdkuilib.jar"/>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/chimpchat.jar"/>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/common.jar"/>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/sdklib.jar"/>
+	<classpathentry kind="lib" path="D:/match/adt-bundle-windows-x86-20130917.467161976/adt-bundle-windows-x86-20130917/sdk/tools/lib/monkeyrunner.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
