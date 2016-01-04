@@ -3,9 +3,9 @@ import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.highgui.Highgui;
-public class lcalgorithm extends SaliencyStrategy{
+public class hc extends SaliencyStrategy{
 	private static int threshold = 30;
-	public SaliencyResult saliencyalgorithmInterface(ImageObj imgobj) {
+	public SaliencyResult saliencyalgorithmInterface(ImageObj imgobj, String method) {
 		// TODO Auto-generated method stub
 		float min=Float.MAX_VALUE;
 	    float max=Float.MIN_VALUE;
@@ -58,7 +58,12 @@ public class lcalgorithm extends SaliencyStrategy{
 	        }
 	    }
 	    new findMarkUtil();
-	    int nums[] = findMarkUtil.findMarkUtil_kmeans(saliencyMap,k_num,255,0,5);
+	    int nums[] = null;
+	    if(method == "kmeans"){
+	    	nums = findMarkUtil.findMarkUtil_kmeans(saliencyMap,k_num,255,0,5);
+	    }else if(method == "random"){
+	    	nums = findMarkUtil.findMarkUtil_random(saliencyMap,k_num,255);
+	    }
 	    result.setK_num(k_num);
 	    result.setSource(imgpath);
 	    result.setResult(nums);

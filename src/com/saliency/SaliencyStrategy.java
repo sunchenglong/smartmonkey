@@ -1,4 +1,4 @@
 package com.saliency;
 public abstract class SaliencyStrategy {
-	 public abstract SaliencyResult saliencyalgorithmInterface(ImageObj imgobj);
+	 public abstract SaliencyResult saliencyalgorithmInterface(ImageObj imgobj,String method);
 }
