@@ -2,6 +2,7 @@ package com.saliency;
 import org.opencv.core.Mat;
 import java.util.*;
 public class findMarkUtil {
+public static int maxtryout = 20;
 public static int[] findMarkUtil_random(Mat src, int k_num, int marker){
 	Random r = new Random();
 	int rows = (int) src.rows();
@@ -10,6 +11,7 @@ public static int[] findMarkUtil_random(Mat src, int k_num, int marker){
 	int col = 0;
 	int result[] = new int[k_num*2];
 	int curl = 0;
+	int count = 0;
 	while(k_num>0){
 		row = r.nextInt(rows);
 		col = r.nextInt(cols);
@@ -18,7 +20,14 @@ public static int[] findMarkUtil_random(Mat src, int k_num, int marker){
 			result[curl+1] = col;
 			curl += 2;
 			k_num --;
-		}	
+		}
+		else if(count>maxtryout){
+			result[curl] = row;
+			result[curl+1] = col;
+			curl += 2;
+			k_num --;
+		}
+		count++;
 	}
 	return result;
 }

@@ -67,6 +67,7 @@ public class lc extends SaliencyStrategy{
 	    result.setK_num(k_num);
 	    result.setSource(imgpath);
 	    result.setResult(nums);
+	    result.setSaliency(saliencyMap);
 		return result;
 	}
 	

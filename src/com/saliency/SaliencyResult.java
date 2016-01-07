@@ -8,12 +8,14 @@ import org.opencv.highgui.Highgui;
 
 public class SaliencyResult {
 	private Mat sourceimg;
+	private Mat saliencymap;
 	private int k_num;
 	private int result[];
 	public SaliencyResult(){}
 	//Set the Input Parameters
 	public void setSource(String sourcepath){this.sourceimg = Highgui.imread(sourcepath);}
 	public void setK_num(int _k_num){this.k_num = _k_num;}
+	public void setSaliency(Mat _saliencymap){this.saliencymap = _saliencymap;}
 	public void setResult(int _result[]){
 		result = new int[k_num*2];
 		for(int i = 0; i < k_num*2; i++)
@@ -29,6 +31,9 @@ public class SaliencyResult {
 			Core.circle(sourceimg, pt, 6, green,10);
 		}
 		Highgui.imwrite(Pathname, sourceimg);
+	}
+	public void writeSaliency(String Pathname){
+		Highgui.imwrite(Pathname, saliencymap);
 	}
 	public void printResult(){
 		for(int i = 0;i < 2 * k_num;i=i+2){
