@@ -36,7 +36,7 @@ public class sr extends SaliencyStrategy{
 		List<Mat> l = new ArrayList<Mat>(); 
 		l.add(ImageRe);l.add(ImageIm);
 		Core.merge(l, tmp2);
-		Highgui.imwrite("tmp2.jpg", tmp2);
+
 		Core.dft(tmp2, Fourier);
 		List<Mat> l1 = new ArrayList<Mat>(); 
 		Core.split(Fourier, l1);
@@ -44,6 +44,8 @@ public class sr extends SaliencyStrategy{
 		ImageIm=l1.get(1);
 		Core.pow(ImageRe, 2.0, tmp1);
 		Core.pow(ImageIm, 2.0, tmp2);
+		Highgui.imwrite("ImageRe.jpg", ImageRe);
+		Highgui.imwrite("ImageIm.jpg", ImageIm);
 		Core.add(ImageRe, ImageIm, tmp3);
 		Core.pow(tmp3, 0.5, tmp3);
 		Core.log(tmp3, LogAmplitude);
