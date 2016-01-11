@@ -12,9 +12,12 @@ public class testSaliency {
 		SaliencyResult result = s.getSaliencyResult();
 		result.writeSaliency("saliencymap.jpg");
 	}
+	public static void test3(){
+		
+	}
 	public static void main(String args[]){
 		//new saliencytest("result.jpg");
-		test1();
+		test2();
 	}
 }
 
