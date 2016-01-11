@@ -16,10 +16,11 @@ public class testUtil {
 		  for(int i=0; i<fs.length; i++){
 		   System.out.println(fs[i].getAbsolutePath());
 		   String input = fs[i].getAbsolutePath();
-		   String output = "sa-" + fs[i].getAbsolutePath();
+		   String output = fs[i].getAbsolutePath() + ".result.jpg";
+		   String saliencyMap =  fs[i].getAbsolutePath() + ".saliency.jpg";
 		   SaliencyUtils s = new SaliencyUtils(input,output,knum,algorithm,method);
 			SaliencyResult result = s.getSaliencyResult();
-			result.writeSaliency("saliencymap.jpg");
+			result.writeSaliency(saliencyMap);
 		   if(fs[i].isDirectory()){
 	         try{
 	        	 runAllFiles(fs[i]);
@@ -28,6 +29,7 @@ public class testUtil {
 	}
 }
 	public static void main(String args[]) throws Exception{
-		test(dir);
+		testUtil t = new testUtil(6,"lc","kmeans");
+		t.runAllFiles(dir);
 	}
 }
