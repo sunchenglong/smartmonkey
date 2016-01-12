@@ -29,7 +29,7 @@ public class testUtil {
 	}
 }
 	public static void main(String args[]) throws Exception{
-		testUtil t = new testUtil(6,"lc","kmeans");
+		testUtil t = new testUtil(10,"lc","kmeans");
 		t.runAllFiles(dir);
 	}
 }
