@@ -14,12 +14,12 @@ public class Kmeans {
 	 * @param args
 	 * @throws IOException
 	 */
-	
-	public static List<ArrayList<ArrayList<Double>>> 
-	initHelpCenterList(List<ArrayList<ArrayList<Double>>> helpCenterList,int k){
-		for(int i=0;i<k;i++){
+
+	public static List<ArrayList<ArrayList<Double>>> initHelpCenterList(
+			List<ArrayList<ArrayList<Double>>> helpCenterList, int k) {
+		for (int i = 0; i < k; i++) {
 			helpCenterList.add(new ArrayList<ArrayList<Double>>());
-		}	
+		}
 		return helpCenterList;
 	}
 	
