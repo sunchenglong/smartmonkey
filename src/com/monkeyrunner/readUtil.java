@@ -3,9 +3,15 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+/**
+ * 读取文件工具类
+ * 静态方法
+ * String ReadFile(String Path)
+ * 输入：Path 读入文件路径
+ * 输出：读出文件内容String
+ */
 public class readUtil {
-	public String ReadFile(String Path){
+	public static String ReadFile(String Path){
 		BufferedReader reader = null;
 		String laststr = "";
 		try{

@@ -1,5 +1,9 @@
 package com.templatematch;
-
+/**
+ * 
+ * 
+ *
+ */
 public class Context {
 	private MatchStrategy matchstrategy;
 	public Context(MatchStrategy matchstrategy)

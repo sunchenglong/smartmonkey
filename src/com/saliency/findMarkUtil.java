@@ -33,7 +33,7 @@ public static int[] findMarkUtil_random(Mat src, int k_num, int marker){
 }
 
 
-public static int[] findMarkUtil_kmeans(Mat src, int k_num, int marker
+	public static int[] findMarkUtil_kmeans(Mat src, int k_num, int marker
 		, float e, int iter){
 	int result[] = findMarkUtil_random(src, k_num, marker);
 	long dist[] = new long[k_num];

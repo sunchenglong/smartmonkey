@@ -2,11 +2,15 @@ package com.monkeyrunner;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-
 import com.android.chimpchat.adb.AdbBackend;
 import com.android.chimpchat.adb.AdbChimpDevice;
 import com.templatematch.MatchInterface;
 import com.templatematch.MatchResult;
+/**
+ * 针对京东的
+ * 
+ *
+ */
 public class testJingdong {
 	private static AdbChimpDevice device;
 	private static AdbBackend adb;
