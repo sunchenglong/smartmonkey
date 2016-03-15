@@ -3,8 +3,8 @@ public class MatchInterface {
 	private MatchResult result;
 	public MatchInterface(String SourcePath,String TemplatePath,int startx,int endx,int starty,int endy,int width,int height)
 	{
-		Context context;
-		context = new Context(new EnsembleAlgorithm());
+		MatchContext context;
+		context = new MatchContext(new EnsembleAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource(SourcePath);
 		imgobj.setTemplate(TemplatePath);

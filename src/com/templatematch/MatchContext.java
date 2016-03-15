@@ -4,9 +4,9 @@ package com.templatematch;
  * 
  *
  */
-public class Context {
+public class MatchContext {
 	private MatchStrategy matchstrategy;
-	public Context(MatchStrategy matchstrategy)
+	public MatchContext(MatchStrategy matchstrategy)
 	{
 		this.matchstrategy = matchstrategy;
 	}

@@ -1,4 +1,4 @@
-package com.monkeyrunner;
+package com.test;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -7,9 +7,8 @@ import com.android.chimpchat.adb.AdbChimpDevice;
 import com.templatematch.MatchInterface;
 import com.templatematch.MatchResult;
 /**
- * 针对京东的
- * 
- *
+ * 针对京东这个应用的测试程序
+ * 单独一个操作的测试
  */
 public class testJingdong {
 	private static AdbChimpDevice device;

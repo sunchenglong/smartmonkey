@@ -2,8 +2,8 @@ package com.templatematch;
 public class TestMatch {
 	public static void test1()
 	{
-		Context context;
-		context = new Context(new EnsembleAlgorithm());
+		MatchContext context;
+		context = new MatchContext(new EnsembleAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource("D:\\itestin\\512.png");
 		imgobj.setTemplate("D:\\itestin\\512a.png");
@@ -31,8 +31,8 @@ public class TestMatch {
 	}
 	public static void test3()
 	{
-		Context context;
-		context = new Context(new EnsembleAlgorithm());
+		MatchContext context;
+		context = new MatchContext(new EnsembleAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource("D:1.png");
 		imgobj.setTemplate("D:a.png");

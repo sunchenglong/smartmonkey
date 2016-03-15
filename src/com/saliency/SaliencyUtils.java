@@ -4,54 +4,54 @@ public class SaliencyUtils {
 	private SaliencyResult result;
 
 	public SaliencyUtils(String sourcePath, int k_num, String method) {
-		Context context = new Context(new lc());
+		SaliencyContext context = new SaliencyContext(new LcAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource(sourcePath);
 		imgobj.setK_num(k_num);
 		;
-		result = context.contextInterface(imgobj, method);
+		result = context.SaliencyContextInterface(imgobj, method);
 	}
 
 	public SaliencyUtils(String sourcePath, String resultPath, int k_num,
 			String method) {
-		Context context = new Context(new lc());
+		SaliencyContext context = new SaliencyContext(new LcAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource(sourcePath);
 		imgobj.setK_num(k_num);
 		;
-		result = context.contextInterface(imgobj, method);
+		result = context.SaliencyContextInterface(imgobj, method);
 		result.writeResult(resultPath);
 		result.printResult();
 	}
 
 	public SaliencyUtils(String sourcePath, String resultPath, int k_num,
 			String algorithm, String method) {
-		Context context = null;
+		SaliencyContext context = null;
 		if (algorithm.equals("lc"))
-			context = new Context(new lc());
+			context = new SaliencyContext(new LcAlgorithm());
 		else if (algorithm.equals("sr"))
-			context = new Context(new sr());
+			context = new SaliencyContext(new SrAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource(sourcePath);
 		imgobj.setK_num(k_num);
 		;
-		result = context.contextInterface(imgobj, method);
+		result = context.SaliencyContextInterface(imgobj, method);
 		result.writeResult(resultPath);
 		result.printResult();
 	}
 
 	public SaliencyUtils(String sourcePath, int k_num, String algorithm,
 			String method) {
-		Context context = null;
+		SaliencyContext context = null;
 		if (algorithm.equals("lc"))
-			context = new Context(new lc());
+			context = new SaliencyContext(new LcAlgorithm());
 		else if (algorithm.equals("sr"))
-			context = new Context(new sr());
+			context = new SaliencyContext(new SrAlgorithm());
 		ImageObj imgobj = new ImageObj();
 		imgobj.setSource(sourcePath);
 		imgobj.setK_num(k_num);
 		;
-		result = context.contextInterface(imgobj, method);
+		result = context.SaliencyContextInterface(imgobj, method);
 	}
 
 	public SaliencyResult getSaliencyResult() {

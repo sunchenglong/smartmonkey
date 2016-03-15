@@ -8,7 +8,7 @@ import org.opencv.core.Mat;
 import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.imgproc.Imgproc;
-public class sr extends SaliencyStrategy{
+public class SrAlgorithm extends SaliencyStrategy{
 	private static int threshold = 180;
 	public SaliencyResult saliencyalgorithmInterface(ImageObj imgobj, String method) {
 		// TODO Auto-generated method stub

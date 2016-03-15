@@ -1,4 +1,4 @@
-package com.monkeyrunner;
+package com.test;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -6,12 +6,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-
 import com.android.chimpchat.adb.AdbBackend;
 import com.android.chimpchat.adb.AdbChimpDevice;
 import com.android.monkeyrunner.*;
 import com.templatematch.MatchInterface;
 import com.templatematch.MatchResult;
+/**
+ * 
+ * ²âÊÔÍ¼Ïñ½Å±¾ µ¥Ôª²âÊÔÄ£¿é
+ *
+ */
 public class testMain {
 	private static String basePath = "testPic/jd/";
 	private static String settings = basePath +"settings";

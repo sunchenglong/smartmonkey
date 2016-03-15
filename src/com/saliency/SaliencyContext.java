@@ -1,12 +1,12 @@
 package com.saliency;
 
-public class Context {
+public class SaliencyContext {
 	private SaliencyStrategy saliencytrategy;
-	public Context(SaliencyStrategy saliencytrategy)
+	public SaliencyContext(SaliencyStrategy saliencytrategy)
 	{
 		this.saliencytrategy = saliencytrategy;
 	}
-	public SaliencyResult contextInterface(ImageObj imgobj,String method)
+	public SaliencyResult SaliencyContextInterface(ImageObj imgobj,String method)
 	{
 		SaliencyResult saliencyresult = saliencytrategy.saliencyalgorithmInterface(imgobj,method);
 		return saliencyresult;

@@ -8,7 +8,11 @@ import com.android.chimpchat.adb.AdbBackend;
 import com.android.chimpchat.adb.AdbChimpDevice;
 import com.templatematch.MatchInterface;
 import com.templatematch.MatchResult;
-
+/**
+ * smart monkey 入口类
+ * smart monkey
+ *
+ */
 public class runSmartmonkey {
 	private static AdbChimpDevice device;
 	private static AdbBackend adb;
@@ -40,6 +44,9 @@ public class runSmartmonkey {
 			String line = null;
 			while ((line = reader.readLine()) != null) {
 				System.out.println(line);
+				/*
+				 * 获取脚本信息
+				 */
 				String operate = line.split("\t")[0]; 
 				String targetfile = line.split("\t")[1];
 				String srcfile = "SRC_"+targetfile;
@@ -49,14 +56,36 @@ public class runSmartmonkey {
 				int endy = Integer.parseInt(line.split("\t")[5]);
 				int scalex = Integer.parseInt(line.split("\t")[6]);
 				int scaley = Integer.parseInt(line.split("\t")[7]);
+				/*
+				 * 读取原始图像
+				 */
 				device.takeSnapshot().writeToFile(basePath+srcfile,"png");
+				/*
+				 * 执行图像匹配算法
+				 */
 				MatchInterface tool = new MatchInterface
 						(basePath+srcfile,basePath+targetfile,startx,starty,endx,endy,scalex,scaley);
 				MatchResult result = tool.getMatchResult();
 				System.out.println(result.startx+result.width/2);
 				System.out.println(result.starty+result.height/2);
-				if(operate.equals("click"));{
+				if(operate.equals("click")){
+					/*
+					 * 执行命令
+					 */
 					device.touch(result.startx+result.width/2,result.starty+result.height/2,com.android.chimpchat.core.TouchPressType.DOWN_AND_UP);
+					/*
+					 * 等待片刻，继续进行
+					 */
+					try{
+					    Thread thread = Thread.currentThread();
+					    thread.sleep(2000);
+					}catch (InterruptedException e) {
+					    e.printStackTrace();
+					}
+				}
+				else if(operate.equals("drag")){
+					device.drag(result.startx,result.starty,
+							result.startx+result.width,result.starty+result.height,2,3);
 					try{
 					    Thread thread = Thread.currentThread();
 					    thread.sleep(2000);

@@ -9,7 +9,7 @@ import org.opencv.highgui.Highgui;
  * 
  *
  */
-public class lc extends SaliencyStrategy {
+public class LcAlgorithm extends SaliencyStrategy {
 	private static int threshold = 30;
 
 	public SaliencyResult saliencyalgorithmInterface(ImageObj imgobj,
