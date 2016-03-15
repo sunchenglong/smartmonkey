@@ -3,3 +3,6 @@
 .classpath
 *.jpg
 *.png
+.gitignore
+/bin/
+.settings/
