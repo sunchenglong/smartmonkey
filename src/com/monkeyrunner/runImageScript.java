@@ -1,5 +1,5 @@
 package com.monkeyrunner;
 
-public class runScript {
+public class runImageScript {
 
 }
