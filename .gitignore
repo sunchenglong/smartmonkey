@@ -9,3 +9,5 @@
 *.class
 /bin/*
 .settings/org.eclipse.jdt.core.prefs
+bin/*
+bin/
