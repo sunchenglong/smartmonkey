@@ -1,3 +1,4 @@
+#motion source startx starty endx endy width height
 click,1.png,374,403,464,521,480,800
 click,2.png,118,736,170,794,480,800
 click,7.png,19,492,117,534,480,800

@@ -6,9 +6,9 @@ public class Context {
 	{
 		this.saliencytrategy = saliencytrategy;
 	}
-	public SaliencyResult contextInterface(ImageObj imgobj)
+	public SaliencyResult contextInterface(ImageObj imgobj,String method)
 	{
-		SaliencyResult saliencyresult = saliencytrategy.saliencyalgorithmInterface(imgobj);
+		SaliencyResult saliencyresult = saliencytrategy.saliencyalgorithmInterface(imgobj,method);
 		return saliencyresult;
 	}
 }
