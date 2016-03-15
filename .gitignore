@@ -1,0 +1,8 @@
+/com/
+/common/
+.classpath
+*.jpg
+*.png
+.gitignore
+/bin/
+.settings/

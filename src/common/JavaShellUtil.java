@@ -79,7 +79,7 @@ private boolean executeShell(String shellCommand) throws IOException {
 		//String commond = "date";
 		try{
 			//System.out.println(t.executeShell(commond));
-			String[] cmd = {"/home/hadoop/android/android-sdk-linux/tools/monkeyrunner","/home/hadoop/git/smartmonkey/pysrc/takeshot.py","/test.png"};
+			String[] cmd = {"/Users/suncl/android/android-sdk-macosx/tools/monkeyrunner","/Users/suncl/workspace/smartmonkey/pysrc/takeshot.py","./test.png"};
 	 		//String[] cmd = {"python","/home/hadoop/git/smartmonkey/pysrc/test.py","test"};
 			Process pid = Runtime.getRuntime().exec(cmd);
 		}catch(Exception e){
