@@ -28,7 +28,13 @@ public class runSmartmonkey {
 		}
 		
 	}
-	
+	/*
+	 * ≤‚ ‘∑Ω∑®
+	 */
+	public void run(String deviceId,int maxstep,int knum,int maxtime){
+		//run("test","test");
+		System.out.println("Start Smart Monkey!");
+	}
 	
 	public static void run(String basePath,String deviceId) {
 		String settings = basePath +"settings";
