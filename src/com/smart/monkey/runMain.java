@@ -1,4 +1,4 @@
-package com.monkeyrunner;
+package com.smart.monkey;
 
 import java.util.Scanner;
 

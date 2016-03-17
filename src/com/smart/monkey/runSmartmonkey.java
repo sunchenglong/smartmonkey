@@ -1,4 +1,4 @@
-package com.monkeyrunner;
+package com.smart.monkey;
 
 import java.io.BufferedReader;
 import java.io.File;
